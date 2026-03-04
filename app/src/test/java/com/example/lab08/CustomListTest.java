@@ -12,6 +12,10 @@ public class CustomListTest {
         assertTrue(list.hasCity(calgary));
     }
 
+    /**
+     * This test the addCity method in CityList
+     * Taken from lab 06
+     */
     @Test
     public void testAddCity() {
         CustomList customList = new CustomList();
@@ -23,5 +27,20 @@ public class CustomListTest {
 
         assertEquals(1, customList.getCities().size());
         assertTrue(customList.getCities().contains(city));
+    }
+
+    /**
+     * This test the deleteCity method
+     * Taken from lab 06
+     */
+    @Test
+    void testDeleteCity() {
+        CustomList cityList = new CustomList();
+
+        City city = new City("Test", "Subject");
+        cityList.addCity(city);
+
+        cityList.deleteCity(city);
+        assertFalse(cityList.getCities().contains(city));
     }
 }
