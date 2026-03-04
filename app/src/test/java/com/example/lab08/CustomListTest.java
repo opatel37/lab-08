@@ -43,4 +43,20 @@ public class CustomListTest {
         cityList.deleteCity(city);
         assertFalse(cityList.getCities().contains(city));
     }
+
+    /**
+     * This tests the countCities method
+     * Taken from lab 06
+     */
+    @Test
+    void testCountCities() {
+        CustomList cityList = new CustomList();
+
+        assertEquals(1, cityList.countCities());
+
+        City city = new City("Test", "Subject");
+        cityList.addCity(city);
+
+        assertEquals(2, cityList.countCities());
+    }
 }
