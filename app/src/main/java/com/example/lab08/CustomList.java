@@ -13,8 +13,7 @@ public class CustomList {
         this.cities = new ArrayList<>();
     }
 
-    // Commented out for TDD purposes
-    // public void addCity(City city) { cities.add(city); }
+    public void addCity(City city) { cities.add(city); }
 
     
 
