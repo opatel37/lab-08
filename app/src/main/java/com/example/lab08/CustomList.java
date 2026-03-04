@@ -15,7 +15,18 @@ public class CustomList {
 
     public void addCity(City city) { cities.add(city); }
 
-    
+    /**
+     * This deletes the given city from the city list if it exists in the list
+     * @param city
+     *      This is the city we want to delete
+     */
+    public void deleteCity(City city) {
+        List<City> list = cities;
+        if (!list.contains(city)) {
+            throw new IllegalArgumentException("City is not in list :(");
+        }
+        cities.remove(city);
+    }
 
     // Will be implemented later using TDD (leave blank for now)
     public boolean hasCity(City city) { return cities.contains(city); }
