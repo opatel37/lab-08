@@ -29,8 +29,7 @@ public class CustomList {
     }
 
     // Will be implemented later using TDD (leave blank for now)
-    // Commeneted out for lab participateion exercise :/
-    //public boolean hasCity(City city) { return cities.contains(city); }
+    public boolean hasCity(City city) { return cities.contains(city); }
 
     /**
      * This returns a sorted list of cities
