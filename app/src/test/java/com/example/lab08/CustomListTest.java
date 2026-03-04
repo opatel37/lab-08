@@ -11,4 +11,17 @@ public class CustomListTest {
         // This will fail initially because hasCity() doesn't exist
         assertTrue(list.hasCity(calgary));
     }
+
+    @Test
+    public void testAddCity() {
+        CustomList customList = new CustomList();
+
+        assertEquals(0, customList.getCities().size());
+
+        City city = new City("Edmonton", "Alberta");
+        customList.addCity(city);
+
+        assertEquals(1, customList.getCities().size());
+        assertTrue(customList.getCities().contains(city));
+    }
 }

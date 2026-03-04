@@ -1,6 +1,8 @@
 package com.example.lab08;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 // Added comment to verify CI on Github
@@ -11,12 +13,23 @@ public class CustomList {
         this.cities = new ArrayList<>();
     }
 
-    public void addCity(City city) {
-        cities.add(city);
-    }
+    // Commented out for TDD purposes
+    // public void addCity(City city) { cities.add(city); }
 
     
 
     // Will be implemented later using TDD (leave blank for now)
     public boolean hasCity(City city) { return cities.contains(city); }
+
+    /**
+     * This returns a sorted list of cities
+     * @return
+     *      Return the sorted list
+     */
+    public List<City> getCities() {
+        List<City> list = cities;
+        Collections.sort(list);
+        return list;
+    }
+
 }
