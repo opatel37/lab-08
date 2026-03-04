@@ -42,4 +42,13 @@ public class CustomList {
         return list;
     }
 
+    /**
+     * This counts how many cities are stored in the city list
+     * Taken from lab 06
+     * @return
+     *      Return the number of cities stored in city list
+     */
+    public int countCities() {
+        return cities.size();
+    }
 }

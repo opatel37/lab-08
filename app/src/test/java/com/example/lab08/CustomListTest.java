@@ -52,11 +52,11 @@ public class CustomListTest {
     void testCountCities() {
         CustomList cityList = new CustomList();
 
-        assertEquals(1, cityList.countCities());
+        assertEquals(0, cityList.countCities());
 
         City city = new City("Test", "Subject");
         cityList.addCity(city);
 
-        assertEquals(2, cityList.countCities());
+        assertEquals(1, cityList.countCities());
     }
 }
